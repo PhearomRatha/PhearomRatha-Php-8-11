@@ -14,9 +14,7 @@ if(isset($_GET['id'])){
 
 }
 
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +32,9 @@ if(isset($_GET['id'])){
 
     <form  class="w-25 p-3 m-auto rounded-3 shadow-lg mt-4 " method="post">
         <h5 class="text-center mb-3 text-primary">update Information</h5>
+          <div class="mb-2"> 
+            <input type="hidden"  class="form-control" placeholder="Name" name="id" value="<?=   $id  ?>">
+        </div>
         <div class="mb-2">
             <label for="Name" class="form-label">Student's Name</label>
             <!-- show data that user select by id in value -->
@@ -75,7 +76,21 @@ if(isset($_GET['id'])){
 <?php
 
 if(isset($_POST['update'])){
-    
+    $id=$_POST['id'];
+    $name=$_POST['name'];
+    $major=$_POST['major'];
+    $gender=$_POST['gender'];
+
+    $update="UPDATE students SET 
+    `stu-name`='$name',`stu-gender`='$gender',`stu-major`='$major'
+     WHERE id = $id ";
+     $update_send=$con->query($update);
+     if($update_send){
+        // redirect to table
+        header("Location:table.php");
+     }
+
+
 }
 
 
