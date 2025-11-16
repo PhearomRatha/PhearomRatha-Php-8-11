@@ -60,7 +60,7 @@ if(isset($_GET['id'])){
         <input type="text" class="form-control" placeholder="major" name="major" value="<?= $major ?>">
     </div>
     <div class="mt-2 d-flex justify-content-center align-items-center">
-        <button type="submit" class=" btn  btn-primary" name="create">Edit </button>
+        <button type="submit" class=" btn  btn-primary" name="update">Edit </button>
     </div>
     </form>
 
@@ -72,4 +72,13 @@ if(isset($_GET['id'])){
 
 <!-- update -->
 
+<?php
+
+if(isset($_POST['update'])){
+    
+}
+
+
+
+?>
 
