@@ -4,10 +4,7 @@ $select = "SELECT * FROM drink";
 // send to db
 $select_send=$con->query($select);
 // store result
-
-while($row = mysqli_fetch_assoc($select_send))
-    
-    {
+while($row = mysqli_fetch_assoc($select_send)){
     echo "
      <tr>
         <td>$row[Code]</td>

@@ -89,8 +89,6 @@ if(isset($_POST['update'])){
         // redirect to table
         header("Location:table.php");
      }
-
-
 }
 
 
